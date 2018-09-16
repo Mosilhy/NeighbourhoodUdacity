@@ -1,0 +1,38 @@
+#map {
+        height: 100%;
+      }
+
+html,body {
+        height: 100%;
+ }
+
+
+.filter {
+    margin: 30px 0;
+    width: 100%;
+    height: 40px
+}
+
+
+.locations{
+		background-color: darkgray;
+		height: 100%;
+}
+
+
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+	
+	padding: 10px;
+}
+
+li:hover{
+	background-color: dimgrey;
+	cursor: pointer;
+}

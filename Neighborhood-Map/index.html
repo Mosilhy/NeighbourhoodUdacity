@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Neighborhood map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+      <div class="col-md-4 locations">
+          <input class="filter" type="text" data-bind="textInput: searchkey"><!-- n8iar el databindname-->
+
+          <ul data-bind="foreach: bindList">
+              <!-- n8iar el databindname-->
+              <li class="h3" data-bind="text: title, click:makeitbounce"></li>
+          </ul>
+      </div>
+      <div class="col-md-8" id="map"></div>
+
+      <script src="js/lib/knockout-3.4.2.js"></script>
+      <script src="js/home.js"></script>
+    
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA73T79MliEuXiHRAZPlytWZgeFj2kpLiE&callback=main"
+              async defer onerror="errorHandling()"></script> <!-- n8iar el databindname-->
+
+  </body>
+</html>
