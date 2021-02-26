@@ -24,10 +24,6 @@ var mylocations = ko.observableArray([{
 {
     title: 'Open Education Center - Ain Shams University',
     location: { lat: 30.0773421, lng: 31.2842302 },
-},
-{
-    title: 'Cairo City',
-    location: { lat: 30.054121, lng: 31.235115 },
 }
 
 ]);
@@ -108,7 +104,7 @@ function setmarks() {
 
         });
         this.makeitbounce = function () {
-
+              console.log(marker);
             //google.maps.event.trigger(this, 'click');
             bar(marker);
         };
@@ -125,7 +121,7 @@ function setmarks() {
 
         if (infowindow.marker != marker) {
             infowindow.marker = marker;
-            fetch('https://openweathermap.org/data/2.5/weather?lat=' + marker.lat + '&' +'lon='+ marker.lon+'&appid=b6907d289e10d714a6e88b30761fae22').then(response => {
+            fetch('http://api.openweathermap.org/data/2.5/weather?lat=' + marker.lat + '&' +'lon='+ marker.lon+'&appid=7b52d38392ee89f48bcf283acb7b4d48').then(response => {
                 return response.json();
             }).then(data => {
                 console.log("APi fetched sucessfully");
